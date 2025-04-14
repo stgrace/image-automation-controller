@@ -166,7 +166,7 @@ func UpdateV2WithSetters(tracelog logr.Logger, inpath, outpath string, policies 
 		// being `latest` if empty in the input; but I'm assuming here
 		// that the policy won't have a tagless ref.
 		image := policy.Status.LatestImage
-		r, err := name.ParseReference(image, name.WeakValidation)
+		r, err := name.ParseReference(image, name.IgnoreValidation)
 		if err != nil {
 			return ResultV2{}, fmt.Errorf("encountered invalid image ref %q: %w", policy.Status.LatestImage, err)
 		}
