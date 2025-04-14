@@ -1,4 +1,4 @@
-module github.com/fluxcd/image-automation-controller
+module github.com/stgrace/image-automation-controller
 
 go 1.23.0
 
@@ -161,4 +161,4 @@ require (
 	sigs.k8s.io/yaml v1.4.0 // indirect
 )
 
-replace github.com/google/go-containerregistry v0.20.3 => github.com/stgrace/go-containerregistry v0.20.3
+replace github.com/google/go-containerregistry v0.20.3 => github.com/stgrace/go-containerregistry v0.20.4
